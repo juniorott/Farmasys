@@ -1,2 +1,2 @@
 # Farmasys
- projeto p2 programação desktop
+ Projeto P2 programação desktop
