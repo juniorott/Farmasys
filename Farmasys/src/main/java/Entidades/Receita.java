@@ -1,32 +1,46 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package Entidades;
 
-/**
- *
- * @author Luciano
- */
-class Receita {
-    private int numeroReceita;
-    private boolean liberacaoRemedio;
+import java.io.Serializable;
+import java.util.List;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.OneToMany;
 
-    public int getNumeroReceita() {
+@Entity
+public class Receita implements Serializable{
+
+    @OneToMany(mappedBy = "receita")
+    private List<Produto> produtos;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Integer id;
+    private Integer numeroReceita;
+    private Boolean liberacaoReceita;
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    public Integer getNumeroReceita() {
         return numeroReceita;
     }
 
-    public void setNumeroReceita(int numeroReceita) {
+    public void setNumeroReceita(Integer numeroReceita) {
         this.numeroReceita = numeroReceita;
     }
 
-    public boolean isLiberacaoRemedio() {
-        return liberacaoRemedio;
+    public Boolean getLiberacaoReceita() {
+        return liberacaoReceita;
     }
 
-    public void setLiberacaoRemedio(boolean liberacaoRemedio) {
-        this.liberacaoRemedio = liberacaoRemedio;
+    public void setLiberacaoReceita(Boolean liberacaoReceita) {
+        this.liberacaoReceita = liberacaoReceita;
     }
     
     

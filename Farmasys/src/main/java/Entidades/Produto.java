@@ -1,51 +1,75 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package Entidades;
 
-/**
- *
- * @author Luciano
- */
-public class Produto {
-    private int id;
-    private int informacaoProduto;
-    private int qtdEstoque;
-    private CadastroProduto cadastroProduto;
+import java.io.Serializable;
+import java.sql.Date;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.ManyToOne;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
+
+@Entity
+public class Produto implements Serializable{
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Integer id;
+    private String nome;
+    private String classificacao;
+    private String informacaoProduto;
+    private Integer quantidadeEstoque;
+    @Temporal(TemporalType.DATE)
+    private Date dataVencimento;
+    @ManyToOne
     private Receita receita;
 
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
-    public int getInformacaoProduto() {
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public String getClassificacao() {
+        return classificacao;
+    }
+
+    public void setClassificacao(String classificacao) {
+        this.classificacao = classificacao;
+    }
+
+    public String getInformacaoProduto() {
         return informacaoProduto;
     }
 
-    public void setInformacaoProduto(int informacaoProduto) {
+    public void setInformacaoProduto(String informacaoProduto) {
         this.informacaoProduto = informacaoProduto;
     }
 
-    public int getQtdEstoque() {
-        return qtdEstoque;
+    public Integer getQuantidadeEstoque() {
+        return quantidadeEstoque;
     }
 
-    public void setQtdEstoque(int qtdEstoque) {
-        this.qtdEstoque = qtdEstoque;
+    public void setQuantidadeEstoque(Integer quantidadeEstoque) {
+        this.quantidadeEstoque = quantidadeEstoque;
     }
 
-    public CadastroProduto getCadastroProduto() {
-        return cadastroProduto;
+    public Date getDataVencimento() {
+        return dataVencimento;
     }
 
-    public void setCadastroProduto(CadastroProduto cadastroProduto) {
-        this.cadastroProduto = cadastroProduto;
+    public void setDataVencimento(Date dataVencimento) {
+        this.dataVencimento = dataVencimento;
     }
 
     public Receita getReceita() {
@@ -58,5 +82,3 @@ public class Produto {
     
     
 }
-
-

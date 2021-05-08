@@ -1,29 +1,52 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package Entidades;
 
+import java.io.Serializable;
 import java.sql.Date;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToOne;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 
-
-/**
- *
- * @author Luciano
- */
-public class RelatorioVenda {
-    private Date data;
+@Entity
+public class RelatorioVenda implements Serializable{
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Integer id;
+    @Temporal(TemporalType.DATE)
+    private Date dataVenda;
+    @ManyToOne
+    private Venda venda;
+    @ManyToOne
     private Produto produto;
-    private String notaFiscal;
+    @OneToOne
     private TipoPagamento tipoPagamento;
 
-    public Date getData() {
-        return data;
+    public Integer getId() {
+        return id;
     }
 
-    public void setData(Date data) {
-        this.data = data;
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    public Date getDataVenda() {
+        return dataVenda;
+    }
+
+    public void setDataVenda(Date dataVenda) {
+        this.dataVenda = dataVenda;
+    }
+
+    public Venda getVenda() {
+        return venda;
+    }
+
+    public void setVenda(Venda venda) {
+        this.venda = venda;
     }
 
     public Produto getProduto() {
@@ -34,14 +57,6 @@ public class RelatorioVenda {
         this.produto = produto;
     }
 
-    public String getNotaFiscal() {
-        return notaFiscal;
-    }
-
-    public void setNotaFiscal(String notaFiscal) {
-        this.notaFiscal = notaFiscal;
-    }
-
     public TipoPagamento getTipoPagamento() {
         return tipoPagamento;
     }
@@ -49,4 +64,6 @@ public class RelatorioVenda {
     public void setTipoPagamento(TipoPagamento tipoPagamento) {
         this.tipoPagamento = tipoPagamento;
     }
+    
+    
 }
