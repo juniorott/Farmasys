@@ -42,6 +42,4 @@ public class Receita implements Serializable{
     public void setLiberacaoReceita(Boolean liberacaoReceita) {
         this.liberacaoReceita = liberacaoReceita;
     }
-    
-    
 }

@@ -64,6 +64,4 @@ public class RelatorioVenda implements Serializable{
     public void setTipoPagamento(TipoPagamento tipoPagamento) {
         this.tipoPagamento = tipoPagamento;
     }
-    
-    
 }

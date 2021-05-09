@@ -28,6 +28,4 @@ public class TipoPagamento implements Serializable{
     public void setNomeOpc(String nomeOpc) {
         this.nomeOpc = nomeOpc;
     }
-    
-    
 }

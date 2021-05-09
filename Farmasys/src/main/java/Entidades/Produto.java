@@ -78,7 +78,5 @@ public class Produto implements Serializable{
 
     public void setReceita(Receita receita) {
         this.receita = receita;
-    }
-    
-    
+    } 
 }

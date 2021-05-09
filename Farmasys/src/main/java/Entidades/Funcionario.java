@@ -13,6 +13,5 @@ public class Funcionario implements Serializable{
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     @OneToOne(mappedBy = "funcionario")
-    private Pessoa pessoa;
-    
+    private Pessoa pessoa;  
 }
