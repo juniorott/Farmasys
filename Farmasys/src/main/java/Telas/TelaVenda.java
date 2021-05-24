@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package TelasCadastros;
+package Telas;
 
 /**
  *
@@ -68,7 +68,7 @@ public class TelaVenda extends javax.swing.JPanel {
 
         NomeFuncionario.setText("Nome Funcionário");
 
-        jTextNomeFuncionario.setActionCommand(null);
+        jTextNomeFuncionario.setActionCommand("null");
         jTextNomeFuncionario.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextNomeFuncionarioActionPerformed(evt);

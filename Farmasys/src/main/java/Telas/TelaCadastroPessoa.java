@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package TelasCadastros;
+package Telas;
 
 /**
  *
@@ -45,7 +45,7 @@ public class TelaCadastroPessoa extends javax.swing.JFrame {
         jTextComplemento = new javax.swing.JTextField();
         Sair = new javax.swing.JButton();
         RuaAvenida = new javax.swing.JLabel();
-        jComboBox1 = new javax.swing.JComboBox<>();
+        jComboBoxSelecionarTipoPessoa = new javax.swing.JComboBox<>();
         Nome = new javax.swing.JLabel();
         jTextCEP = new javax.swing.JTextField();
         jTextNome = new javax.swing.JTextField();
@@ -108,7 +108,6 @@ public class TelaCadastroPessoa extends javax.swing.JFrame {
         );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(730, 370));
         setResizable(false);
 
         jTextNumero.addActionListener(new java.awt.event.ActionListener() {
@@ -147,7 +146,7 @@ public class TelaCadastroPessoa extends javax.swing.JFrame {
 
         RuaAvenida.setText("Rua/Avenida");
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Cliente", "Funcionário" }));
+        jComboBoxSelecionarTipoPessoa.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Cliente", "Funcionário" }));
 
         Nome.setText("Nome ");
 
@@ -226,7 +225,7 @@ public class TelaCadastroPessoa extends javax.swing.JFrame {
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                                 .addComponent(jTextNome)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addComponent(jComboBoxSelecionarTipoPessoa, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addContainerGap())))
             .addGroup(layout.createSequentialGroup()
                 .addGap(168, 168, 168)
@@ -247,7 +246,7 @@ public class TelaCadastroPessoa extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jTextNome, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jComboBoxSelecionarTipoPessoa, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(CPF)
@@ -372,7 +371,7 @@ public class TelaCadastroPessoa extends javax.swing.JFrame {
     private javax.swing.JButton Salvar2;
     private javax.swing.JPasswordField SenhaLogin;
     private javax.swing.JLabel Telefone;
-    private javax.swing.JComboBox<String> jComboBox1;
+    private javax.swing.JComboBox<String> jComboBoxSelecionarTipoPessoa;
     private javax.swing.JTextField jTextBairro;
     private javax.swing.JTextField jTextCEP;
     private javax.swing.JTextField jTextCPF;
